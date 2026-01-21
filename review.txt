@@ -1,0 +1,33 @@
+collections
+    Counter()
+    defaultdict()
+
+str
+    split()
+    lower()
+    isalnum()
+    join()
+    [::-1]
+    isalpha()
+    isdigit()
+
+set
+    
+built-in functions
+    sum()
+    len()
+    filter()
+
+statistics
+    mean()
+
+fractions
+    Fraction
+    Fraction().numerator
+    Fraction().denominator
+    Fraction相减
+    Fraction相加
+
+yield
+
+递归

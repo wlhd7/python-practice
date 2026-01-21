@@ -1,0 +1,42 @@
+1. **统计句子中每个单词的元音字母数量（复习：`set`, `lower()`；新：字典推导式）**
+函数名：`count_vowels_per_word(sentence: str) -> dict[str, int]`
+说明：统计句子中每个单词的元音字母数量，保留原单词形式作为键。
+示例输入："This is an example."
+示例输出：{'This': 1, 'is': 1, 'an': 1, 'example': 3}
+难度：中等
+涉及要点：复习 - `set`, `str.lower()`, `str.split()`；新 - 字典推导式
+
+2. **递归实现斐波那契数列（复习：`递归`；新：尾递归/备忘录思路说明）**
+函数名：`fibonacci_recursive(n: int) -> list[int]`
+说明：返回前 `n` 个斐波那契数（从 0 开始）。要求用递归实现，并在函数文档或注释中简要说明如何避免重复计算（例如使用备忘录或转换为尾递归的思路）。
+示例输入：`n = 5`
+示例输出：[0, 1, 1, 2, 3]
+难度：进阶
+涉及要点：复习 - `递归`；新 - 递归优化（备忘录 / 尾递归概念）
+
+3. **统计字符串中每个字符的频率（复习：`Counter`；新：忽略大小写并保留首次出现形式与顺序）**
+函数名：`char_frequency(s: str) -> dict[str, int]`
+说明：统计字符串中每个字母或数字的出现频率（忽略非字母数字字符），统计时不区分大小写，但返回的键应为首次出现时的原始大小写形式，且按首次出现顺序排列（要求返回的 `dict` 保持插入顺序）。
+示例输入："Hello, World! 123"
+示例输出：{'H': 1, 'e': 1, 'l': 3, 'o': 2, 'W': 1, 'r': 1, 'd': 1, '1': 1, '2': 1, '3': 1}
+难度：中等
+涉及要点：复习 - `collections.Counter`, `str.isalnum()`；新 - 插入顺序保持与大小写处理技巧
+
+4. **计算两个分数的差并返回最简形式（复习：`fractions.Fraction`；新：支持多种输入格式）**
+函数名：`subtract_fractions(fraction1: str|tuple[int,int], fraction2: str|tuple[int,int]) -> str`
+说明：接收两种形式的分数输入（例如 "3/4" 或 `(3, 4)`），计算差并返回最简分数字符串（例如 "1/4"）。请在实现中处理输入验证并返回规范格式（`"a/b"`）。
+示例输入：`fraction1 = "3/4", fraction2 = "1/2"`
+示例输出："1/4"
+难度：基础
+涉及要点：复习 - `fractions.Fraction`；新 - 参数类型检查与多输入格式处理（`isinstance`）
+
+5. **句子中单词长度分布（复习：`len`, `split()`；新：使用 `defaultdict` 并支持最短/最长长度过滤）**
+函数名：`word_length_distribution(sentence: str, min_len: int = 0, max_len: int | None = None) -> dict[int, int]`
+说明：统计句子中每种长度的单词出现次数（只统计字母数字字符构成的单词长度），并支持参数 `min_len` 与 `max_len` 用来过滤只统计长度在范围内的单词。返回 `dict`，键为长度，值为出现次数。
+示例输入："This is a test sentence.", `min_len=1, max_len=None`
+示例输出：{4: 2, 2: 1, 1: 1, 8: 1}
+难度：中等
+涉及要点：复习 - `len`, `split()`, `filter`, `defaultdict`；新 - 可选过滤参数与类型注解的联合使用
+
+提交说明：把你的答案写入 `lab.py` 或 `user_answer.txt`（保持函数名一致），在 chat 中输入 `answer`，我会读取并批改，把解析写入 `answer.txt`。每次出题会同时复习 `review.txt` 中的知识并引入至少一个新概念，请把学到的新知识追加到 `review.txt`。
+

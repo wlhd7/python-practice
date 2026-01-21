@@ -1,0 +1,9 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:pyenv",
+    "python-envs.pythonProjects": [],
+  
+    // 关闭所有语言特定设置
+    "files.associations": {
+        "*.py": "text"
+    }
+}
